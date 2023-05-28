@@ -34,4 +34,8 @@ OpenCV, bilgisayarlı görüntü işleme alanında en yaygın kullanılan açık
 5.	PyTorch: Yine derin öğrenme için kullanılan bir açık kaynaklı kütüphanedir. Görüntü sınıflandırması, nesne tespiti, segmentasyon ve stil transferi gibi görevlerde kullanılabilir. PyTorch, esneklik ve kullanım kolaylığı açısından popülerdir.
 6.	MATLAB Image Processing Toolbox: MATLAB ortamında kullanılan bir görüntü işleme aracıdır. Görüntü işleme algoritmaları, filtreleme, segmentasyon, kenar tespiti, şekil tanıma ve görüntü iyileştirme gibi işlevleri içerir.
 Bu listedeki kütüphaneler, OpenCV'ye benzer işlevlere sahip olup görüntü işleme uygulamalarında yaygın olarak kullanılmaktadır. Seçim, projenizin gereksinimlerine, programlama dilinize ve tercihlerinize bağlı olarak değişebilir.
+Algoritmanın karmaşıklık sınırlarını:
+Ayrıca, algoritmanın karmaşıklık sınırlarını belirlemek için kodun performansını etkileyen bazı faktörleri göz önünde bulundurmamız  gerekiyor. Template Matching algoritması, büyük görüntü veri setleri veya büyük şablonlarla kullanıldığında zaman açısından maliyetli olabilir. İşlem süresini azaltmak için resim boyutunu küçültmek veya farklı Template Matching yöntemlerini denemek gibi optimizasyon teknikleri kullanabilinir.
+Ayrıca, Template Matching algoritması bazı zorluklarla karşılaşabilir, örneğin ışıklandırma değişiklikleri, ölçekleme veya dönme gibi deformasyonlar, arka plan gürültüsü gibi faktörler doğru eşleşmeyi etkileyebilir. Bu nedenle, uygulamayı bu zorluklarla başa çıkabilmesi için ek ön işleme adımları veya farklı algoritmaları denenmeli.
+
 
