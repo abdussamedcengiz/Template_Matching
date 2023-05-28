@@ -1,39 +1,33 @@
 package com.cengiz.templatematching;
+
 import org.opencv.core.Core;
 import org.opencv.core.Core.MinMaxLocResult;
 import org.opencv.core.Mat;
-import org.opencv.core.point;
+import org.opencv.core.Point;
 import org.opencv.core.Scalar;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
-import java.awt.*;
-
-
 public class Main {
     public static void main(String[] args) {
-
-       System.LoodLibary(Core.NATIVE_LIBARY_NAME);
-       Mat source=null;
-       Mat template=null;
-       String filepath="C:\\Users\\SAMET\\Downloads\\drive-download-20230525T092359Z-001.zip"
-        source=Imgcodecs.imread(filepath+"C:\\Users\\SAMET\\AppData\\Local\\Temp\\" +
-                "Temp1_drive-download-20230525T092359Z-001.zip");
-        template=Imgcodecs.imread(filepath+"C:\\Users\\SAMET\\AppData\\Local\\Temp\\" +
-                "Temp1_drive-download-20230525T092359Z-001.zip\\31.png");
-        Mat outputImage=new Mat();
-        int machMethod=Imgproc.TM_CCOEFF;
-        Imgproc.matchTempLate(source,template,outputImage,machMethod );
-
-        MinMaxLocResult mmr=Core.minMaxLoc(outputImage);
-        Point matchloc=mmr.maxLoc;
-        Imgproc.rectangle(source,matchloc,new Point(matchloc.x+template.cols(),
-                matchloc.y+template.rows()),Scalar(255,255,255));
-        Imgcodecs.imvrite(filepath+"sonuc.jpg",source);
-        System.out.println("görüntü tarama işlemi tamamlandı");
-
-
-
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+        
+        Mat source = null;
+        Mat template = null;
+        String filepath = "C:\\Users\\SAMET\\Downloads\\drive-download-20230525T092359Z-001.zip\\";
+        
+        source = Imgcodecs.imread(filepath + "31.png");
+        template = Imgcodecs.imread(filepath + "template.png");
+        
+        Mat outputImage = new Mat();
+        int matchMethod = Imgproc.TM_CCOEFF;
+        Imgproc.matchTemplate(source, template, outputImage, matchMethod);
+        
+        MinMaxLocResult mmr = Core.minMaxLoc(outputImage);
+        Point matchLoc = mmr.maxLoc;
+        Imgproc.rectangle(source, matchLoc, new Point(matchLoc.x + template.cols(), matchLoc.y + template.rows()), new Scalar(255, 255, 255));
+        
+        Imgcodecs.imwrite(filepath + "sonuc.jpg", source);
+        System.out.println("Görüntü tarama işlemi tamamlandı.");
     }
-
 }
