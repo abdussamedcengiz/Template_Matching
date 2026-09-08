@@ -1,4 +1,30 @@
-# Template_Matching
+# Template Matching (Java + OpenCV)
+
+Goruntu isleme odevi: 150 gorsel 20x20 piksellik parcalara bolunuyor,
+parcalar OpenCV'nin **Template Matching** yontemiyle karsilastiriliyor ve
+birbirine en cok benzeyenler bulunuyor.
+
+## Kod
+
+`Template Matching Yontemi.txt` -- **Java** ile yazilmis, OpenCV'nin Java
+baglantilarini kullanan program (`org.opencv.imgproc.Imgproc`).
+
+Calistirmak icin OpenCV'nin Java kutuphanesi ve yerel (native) kutuphanesi
+kurulu olmali:
+
+```bash
+javac -cp opencv-xxx.jar Program.java
+java -cp .:opencv-xxx.jar -Djava.library.path=<opencv-native-yolu> Program
+```
+
+> Iki not: dosya `.txt` uzantisiyla kaydedildigi icin GitHub kodu renkli
+> gostermiyor; ayrica gorsellerin okundugu klasor yolu koda sabit yazilmis
+> (kullanicinin kendi Downloads klasoru), baska bir makinede calismasi icin
+> degistirilmesi gerekiyor.
+
+---
+
+## Odev raporu
 Ödevde izlenecek adımlar :
 1.	Görselleri yükleyip: Belirtilen linkteki 150 adet görseli bilgisayar indirin ve bir klasöre kaydedin.
 2.	Görselleri parçalara bölün: Her görseli 20x20 piksel boyutunda parçalara bölebilirsiniz. Bu, görselinizi daha küçük bölgelerini analiz etmenize ve benzerlikleri bulmanıza yardımcı olur.
