@@ -6,8 +6,10 @@ birbirine en cok benzeyenler bulunuyor.
 
 ## Kod
 
-`Template Matching Yontemi.txt` -- **Java** ile yazilmis, OpenCV'nin Java
-baglantilarini kullanan program (`org.opencv.imgproc.Imgproc`).
+`Program.java` -- **Java** ile yazilmis, OpenCV'nin Java baglantilarini
+kullanan program (`org.opencv.imgproc.Imgproc`). Dosya daha once
+`Template Matching Yontemi.txt` adiyla duruyordu; icindeki sinif adi
+`Program` oldugu icin `Program.java` olarak yeniden adlandirildi.
 
 Calistirmak icin OpenCV'nin Java kutuphanesi ve yerel (native) kutuphanesi
 kurulu olmali:
@@ -17,9 +19,8 @@ javac -cp opencv-xxx.jar Program.java
 java -cp .:opencv-xxx.jar -Djava.library.path=<opencv-native-yolu> Program
 ```
 
-> Iki not: dosya `.txt` uzantisiyla kaydedildigi icin GitHub kodu renkli
-> gostermiyor; ayrica gorsellerin okundugu klasor yolu koda sabit yazilmis
-> (kullanicinin kendi Downloads klasoru), baska bir makinede calismasi icin
+> Not: gorsellerin okundugu klasor yolu koda sabit yazilmis (kullanicinin
+> kendi Downloads klasoru), baska bir makinede calismasi icin
 > degistirilmesi gerekiyor.
 
 ---
